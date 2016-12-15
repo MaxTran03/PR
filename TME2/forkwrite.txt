@@ -1,0 +1,31 @@
+Il y a 15 ordres d'instructions possibles.
+Mais il n'y a seulement que 5 possibles contenus de fichier:
+- fghie123
+- 45hie123
+- 453fghi
+- 45123hi
+- 45hi123
+
+Les numéros associés aux instructions:
+1) write (fd1,"123", strlen ("123"))
+2) write (fd2,"45", strlen ("45"))
+3) fd3 = dup(fd1)
+4) lseek (fd3,0,SEEK_SET)
+5) write (fd3,"fg", strlen ("fg"))
+6) write (fd1,"hi", strlen ("hi"))
+
+123456 -> fghie123
+132456 -> fghie123
+134256 -> fghie123
+134526 -> 45hie123
+134562 -> 45hie123
+312456 -> fghie123
+314256 -> fghie123
+314526 -> 45hie123
+314562 -> 45hie123
+341256 -> 453fghi
+341526 -> 453fghi
+341562 -> 453fghi
+345126 -> 45123hi
+345162 -> 45123hi
+345612 -> 45hi123

@@ -1,0 +1,36 @@
+
+
+Main
+  |
+  |
+  --------T1
+  |        |
+  |        |
+  |        -------T11------------------------------T12
+  |        |       |                                |
+           |       |                                |
+                   |                                |
+                   -----T111---T112---T113          ---T121---T122---T123
+                   |      |      |      |           |     |     |      |
+                   |      |      |      |           |     |     |      |
+                          |      |      |                 |     |      |
+                          |      |      |                 |     |      |
+
+
+Voici l'arborescence du code fourni avec la valeur 1 et comme max 3.
+Le Main crée un thread T1, ce dernier en crée 2 T11 et T12, ces derniers créent respectivement (T111, T112, et T113) et (T121, T122 et T123).
+
+On obtient alors 9 threads créés.
+
+Le formule calculant le nombre de Threads créées au niveau lvl est:
+(C'est la somme de i! (i factoriel) divisé par lvl! (lvl factoriel) avec i égale à lvl+1 allant jusqu'à max et qu'on rajoute 1.)
+
+Formule -> 1 + SOMME {i! / lvl!} de i=lvl+1 à max
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+
+Le programme crée un fils F, affiche '1' puis 'FIN' et se termine (le 'X' signifie la fin du processus).
+Le fils F crée deux fils PF1 et PF2, affiche '2' puis 'FIN' et se termine.
+Les deux petits fils PF1 et PF2 créent chacun trois fils (en tout 6 PPF), affichent '3' puis 'FIN' et se termine.
+Les 6 PPF affichent 'FIN' avant de se terminer.
+
+En tout il y a 10 processus dont 9 crées. 
+
+NB: SI problème d'affichage avec l'arborescence, mettre en plein écran.
+
+
+Arborescence:
+------------
+
+
+P
+|
+|
+----------F
+|			 |
+|->1		 |
+|			 |
+|			 ---------PF1-------------------------------------PF2
+|->FIN	 |			 |														|
+|         |->2     |													   |
+X			 |        |										 			   |
+			 |        |														|
+			 |->FIN   ---------PPF11----PPF12------PPF13       ---------PPF21---PPF22-----PPF33
+			 |        |			  |         |         |				|			|         |         |
+			 X        |->3      |         |         |				|			|         |         |
+						 |         |         |         |			   |->3		|         |         |
+		 				 |         |         |         |				|			|         |         |
+			 			 |->FIN    |         |         |				|			|         |         |
+				 		 |         |->FIN    |->FIN    |->FIN		|->FIN	|->FIN	 |->FIN	  |->FIN  
+						 X         |         |         |				|			|         |         |
+				 		           X         X         X				X        X         X         X
+				 				           
+
+
+
